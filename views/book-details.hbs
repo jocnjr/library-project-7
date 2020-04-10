@@ -2,7 +2,7 @@
 
 {{#with book}}
 <h1>{{title}}</h1>
-<h4>Author: {{author}} - rating: {{rating}}</h4>
+<h4>Author: {{author.[0].name}} {{author.[0].lastName}}- rating: {{rating}}</h4>
 {{#if path}}
 <img src="{{path}}" alt="{{title}}">
 {{/if}}
