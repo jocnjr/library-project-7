@@ -25,7 +25,7 @@ const SlackStrategy = require("passport-slack").Strategy;
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
 mongoose
-  .connect('mongodb://localhost/library-project-7', {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
