@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Book = require('../models/book');
+const Author = require('../models/author');
 const ensureLogin = require("connect-ensure-login");
 
 
@@ -52,6 +53,7 @@ router.get('/book/:bookId', (req, res) => {
 
   Book
     .findById(bookId)
+    .populate('author')
     .then(book => {
       console.log(book);
       res.render('book-details', {

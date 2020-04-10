@@ -22,7 +22,11 @@ const bookSchema = new Schema({
     ref: 'User'
   },
   path: String, // points to the path of the image
-  originalName: String // images original name
+  originalName: String, // images original name
+  reviews: [{
+    user: String,
+    comments: String
+  }]
 }, {
   timestamps: true
 });
